@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>impresiones chato</title>
+    <meta name="description" content="Generador de facturas" />
+    <meta name="keywords" content="conmenas facturas generador" />
+    <link rel="stylesheet" href="styles/skin.css" />
+    <link rel="icon" type="image/png" href="./img/Sin título.png">
+  </head>
+
+  <body>
+    <section>
+      <header>
+        <span>Facturas</span>
+        <button id="btn-download-pdf" title="Descargar">🡇</button>
+      </header>
+      <main>
+        <div class="paper">
+          <div class="logo" data-html2canvas-ignore>
+            <img src="./img/Sin título.png" alt="logo conmenas" />
+          </div>
+          <div class="title"><b>Factura</b></div>
+          <div class="top">
+            <div class="topper">
+              <div class="de-txt">
+                <span><b>DE</b></span>
+                <span>Impresiones Chato</span>
+                <span> 9 de Julio, Galpon, Salta</span>
+              </div>
+              <div class="a-txt">
+                <span><b>FACTURA A</b></span>
+                <span contenteditable>Nombre:</span>
+                <span contenteditable>Cuit:</span>
+              </div>
+            </div>
+            <div class="info-txt">
+              <div>
+                <span><b>N° DE FACTURA: </b></span>
+                <span><b>FECHA: </b></span>
+                <!-- <span><b>N° DE PEDIDO: </b></span> -->
+                <!-- <span><b>FECHA DE VENCIMIENTO: </b></span> -->
+              </div>
+              <div>
+                <span class="numero" contenteditable>FN-001</span>
+                <span class="fecha" ></span>
+                <!-- <span contenteditable>0002/2021</span> -->
+                <!-- <span>08/04/2021</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>CANT.</th>
+                  <th>DESCRIPCIÓN</th>
+                  <th>PRECIO UNITARIO</th>
+                  <th>IMPORTE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td contenteditable></td>
+                  <td contenteditable>
+                    
+                  </td>
+                  <td contenteditable>$</td>
+                  <td contenteditable>$</td>
+                </tr>
+                <tr>
+                  <td contenteditable></td>
+                  <td contenteditable>
+                    
+                  </td>
+                  <td contenteditable>$</td>
+                  <td contenteditable>$</td>
+                </tr>
+                <tr>
+                  <td contenteditable></td>
+                  <td contenteditable>
+                    
+                  </td>
+                  <td contenteditable>$</td>
+                  <td contenteditable>$</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="add" data-html2canvas-ignore>+</div>
+
+          </div>
+          <div class="subs">
+            <div class="opts" data-html2canvas-ignore>
+              <div>
+                <input type="checkbox" id="abono" />
+                <label for="abono">Abono</label>
+              </div>
+              <div>
+                <input type="checkbox" id="descuento" />
+                <label for="descuento">Descuento</label>
+              </div>
+            </div>
+            <table>
+              <tr class="abono oculto">
+                <td>Abono</td>
+                <td contenteditable>$</td>
+              </tr>
+              <tr>
+                <td>Subtotal</td>
+                <td contenteditable>$</td>
+              </tr>
+              <tr class="descuento oculto">
+                <td>Descuento</td>
+                <td contenteditable>$</td>
+              </tr>
+            </table>
+          </div>
+          <div class="total">
+            <table>
+              <tr>
+                <td><b>TOTAL</b></td>
+                <td contenteditable>$</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/purify.min.js"></script>
+    <script src="js/jspdf.umd.min.js"></script>
+    <script src="js/controller.js"></script>
+  </body>
+</html>
